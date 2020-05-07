@@ -1,6 +1,7 @@
-const server = require("./api/server.js");
+const server = require('./api/server.js');
 
-const port = 5000;
+// heroku will add the port variable to the enviroment
+const port = process.env.PORT || 5000; // use the port if not grab 5000
 server.listen(port, () => {
   console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
 });
